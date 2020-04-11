@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 * {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 body {
@@ -11,11 +11,11 @@ body {
 }
 header {
 	text-align: center;
-	padding: 70px 0px 50px 0px;
+	padding: 70px 0px 50px 0;
 }
 header h1 {
-	font-weight: 300;
 	font-size: 1.5rem;
+	font-weight: 200;
 	color: hsl(234, 12%, 34%);
 }
 header h2 {
@@ -25,21 +25,21 @@ header h2 {
 	margin-bottom: 1.5rem;
 }
 header p {
+	font-weight: 400;
 	font-size: 1rem;
-	font-weight: 300;
 	color: hsl(229, 6%, 66%);
 	max-width: 500px;
 	margin: 0 auto;
 }
 .cards {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	flex-direction: column;
 	margin-bottom: 80px;
 }
 .card {
-	box-shadow: 2px 8px 14px 0px hsla(229, 6%, 66%, 0.58);
+	box-shadow: 2px 8px 14px 0px hsla(229, 6%, 66%, 0.6);
 	border-radius: 8px;
 	padding: 30px;
 	margin: 2rem 0;
@@ -60,21 +60,31 @@ header p {
 	margin: 0;
 }
 
+.card img {
+	display: block;
+	margin-left: auto;
+	margin-top: 30px;
+}
 .card h2 {
 	color: hsl(234, 12%, 34%);
 	font-size: 1.5rem;
 }
 .card p {
-	color: hsl(229, 6%, 66%);
 	font-size: 1rem;
-}
-.card img {
-	display: block;
-	margin-left: auto;
-	margin-top: 20px;
+	color: hsl(229, 6%, 66%);
 }
 
 @media only screen and (min-width: 1200px) {
+	body {
+		font-size: 18px;
+	}
+	header h1,
+	header h2 {
+		font-size: 2em;
+	}
+	header p {
+		font-size: 1.1rem;
+	}
 	.cards {
 		flex-direction: row;
 	}
