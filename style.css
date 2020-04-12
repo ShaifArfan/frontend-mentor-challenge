@@ -4,11 +4,16 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+::selection {
+	background-color: black;
+	color: white;
+}
 body {
 	font-family: 'Open Sans', sans-serif;
 	min-height: 100vh;
 	background-color: #131417;
 	color: #ffffff;
+	outline: none;
 }
 header {
 	padding: 50px 30px 50px 30px;
@@ -47,6 +52,7 @@ header a {
 	background-color: #1e1f26;
 	transition: .3s ease background-color;
 	margin-bottom: 1px;
+	overflow: hidden;
 }
 .list ul li:hover {
 	background-color: #22232b;
