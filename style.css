@@ -7,7 +7,8 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	min-height: 100vh;
-	background-color: gainsboro;
+	background-color: #131417;
+	color: #ffffff;
 }
 header {
 	padding: 50px 30px 50px 30px;
@@ -16,39 +17,136 @@ header {
 header h1 {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
-	font-size: 40px;
+	font-size: 30px;
 }
 header h2 {
-	margin-top: 20px;
+	margin-top: 10px;
 	font-weight: 400;
 	font-size: 20px;
 }
 header a {
-	color: blueviolet;
+	color: aqua;
 	text-decoration: underline;
 }
 .list {
-	max-width: 500px;
+	max-width: 600px;
 	margin: 0 auto;
 	text-align: left;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 .list ul {
 	list-style: none;
+	width: 100%;
 }
 .list ul li {
+	position: relative;
+	cursor: pointer;
+	width: 100%;
+	height: auto;
+	padding: 20px 25px;
+	background-color: #1e1f26;
+	transition: .3s ease background-color;
 	margin-bottom: 1px;
 }
-.list ul li a {
-	display: block;
-	padding: 20px;
-	background-color: rgb(17, 3, 44);
-	color: white;
+.list ul li:hover {
+	background-color: #22232b;
+}
+.list ul li h1 {
+	line-height: 40px;
+	color: rgba(255, 255, 255, 0.76);
 	text-decoration: none;
 	font-weight: 400;
 	font-size: 22px;
-	transition: .5s ease background-color;
+}
+.list .buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	height: 0;
+	transition: .3s ease height;
+	visibility: hidden;
+}
+.list ul li .buttons a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: no-wrap;
+	padding: 5px 10px;
+	margin: 5px 3px;
+	background-color: #2d2f35;
+	border-radius: 8px;
+	font-size: 18px;
+	color: rgba(255, 255, 255, 0.712);
+	text-decoration: none;
+	transition-delay: .1s;
+	transition: .5s ease;
+	transition-property: opacity, margin-top, background-color;
+	opacity: 0;
+}
+.list ul li .buttons a img {
+	display: inline-block;
+	height: 25px;
+	width: 25px;
+	padding-right: 5px;
+}
+.list ul li .buttons a p {
+	display: inline-block;
 }
 .list ul li a:hover {
-	background-color: rgba(17, 3, 44, 0.945);
-	border-right: 5px solid aqua;
+	background-color: black;
+}
+.list li .close {
+	visibility: hidden;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+}
+.list li.active {
+	cursor: auto;
+}
+.list li.active img {
+	visibility: visible;
+}
+.list li.active .buttons {
+	visibility: visible;
+	height: 60px;
+}
+.list li.active .buttons a {
+	animation: button-animation .5s ease forwards;
+}
+.list li.active .buttons a:nth-child(1) {
+	animation-delay: .1s;
+}
+.list li.active .buttons a:nth-child(2) {
+	animation-delay: .15s;
+}
+.list li.active .buttons a:nth-child(3) {
+	animation-delay: .2s;
+}
+@keyframes button-animation {
+	0% {
+		opacity: 0;
+		transform: translateY(40px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+@media only screen and (max-width: 550px) {
+	.list li.active .buttons {
+		height: 80px;
+		justify-content: flex-start;
+	}
+}
+@media only screen and (min-width: 768px) {
+	header h1 {
+		font-size: 40px;
+	}
 }
