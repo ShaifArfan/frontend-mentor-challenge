@@ -82,6 +82,10 @@ header img {
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 1.1rem;
 }
+.container form label {
+	visibility: hidden;
+	position: absolute;
+}
 .container form button {
 	cursor: pointer;
 	position: absolute;
