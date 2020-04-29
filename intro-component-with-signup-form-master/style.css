@@ -4,9 +4,6 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-:root {
-	--red: hsl(0, 100%, 74%);
-}
 .error-icon,
 .error-text {
 	display: none;
@@ -135,7 +132,7 @@ html {
 	right: 0;
 	font-size: .8rem;
 	font-style: italic;
-	color: var(--red);
+	color: hsl(0, 100%, 74%);
 	font-weight: 500;
 }
 .error-icon {
@@ -148,10 +145,15 @@ html {
 .field-group.error .error-icon {
 	display: block;
 }
+.field-group.error input {
+	border: 2px solid hsl(0, 100%, 74%);
+}
 @media only screen and (min-width: 1000px) {
+	#intro {
+		background-image: url(./images/bg-intro-desktop.png);
+	}
 	.container {
 		flex-direction: row;
-		background-image: url(./images/bg-intro-desktop.png);
 	}
 	.left-col {
 		text-align: left;
