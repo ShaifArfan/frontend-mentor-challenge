@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+html {
+	font-size: 16px;
+	font-family: 'karla', sans-serif;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+section {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(204, 43%, 93%);
+	padding: 100px 30px;
+}
+.container {
+	display: grid;
+	grid-template-columns: 100%;
+	max-width: 550px;
+	margin: 0 auto;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0px 0px 14px 1px #00000024;
+}
+.item {
+	padding: 30px;
+}
+.item-1 {
+	background-color: white;
+}
+.item-1 h2 {
+	color: hsl(179, 62%, 43%);
+	font-weight: 700;
+	font-size: 1.3rem;
+	margin-bottom: 15px;
+}
+.item-1 h3 {
+	color: hsl(71, 73%, 54%);
+	font-size: 1rem;
+	margin-bottom: 15px;
+}
+.item-1 p {
+	color: hsl(218, 22%, 67%);
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.item-2 {
+	background-color: hsl(179, 62%, 43%);
+}
+.item-2 h3 {
+	color: white;
+	font-weight: 400;
+	font-size: 1.rem;
+	margin-bottom: 15px;
+}
+.item-2 p {
+	color: hsl(204, 43%, 93%);
+	font-size: 1rem;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+.item-2 p span {
+	font-size: 2.5rem;
+	font-weight: 600;
+}
+.item-2 a {
+	text-align: center;
+	width: 100%;
+	padding: 15px;
+	border-radius: 8px;
+	display: inline-block;
+	background-color: hsl(71, 73%, 54%);
+	color: white;
+	text-decoration: none;
+	font-size: 1.2rem;
+	margin-top: 30px;
+	font-weight: 700;
+	box-shadow: 0px 4px 10px 1px #00000033;
+}
+.item-3 {
+	background-color: #4abebd;
+}
+.item-3 h3 {
+	color: white;
+	font-weight: 400;
+	font-size: 1.3rem;
+	margin-bottom: 15px;
+}
+.item-3 p {
+	color: hsl(204, 43%, 93%);
+	line-height: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.container {
+		grid-template-columns: 1fr 1fr;
+	}
+	.container .item-1 {
+		grid-area: 1 / 1 / 2 / 3;
+	}
+	.container .item-2,
+	.container .item-3 {
+		grid-row: 2;
+	}
+}
