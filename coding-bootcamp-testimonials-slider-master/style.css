@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
 html {
 	font-family: 'Inter', sans-serif;
 	font-size: 32px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 .container {
 	min-height: 100vh;
@@ -16,10 +16,9 @@ html {
 	justify-content: center;
 	padding: 30px;
 	background-image: url(./images/pattern-curve.svg);
-	background-repeat: no-repeat;
+	background-position: center bottom;
 	background-size: contain;
-	background-position: bottom;
-	overflow: hidden;
+	background-repeat: no-repeat;
 }
 .slider {
 	display: block;
@@ -27,17 +26,14 @@ html {
 	width: 100%;
 	max-width: 850px;
 	margin: 0 auto;
-	width: 100%;
-	height: 100%;
 	position: relative;
 }
 .slide {
-	/* position: absolute; */
 	width: 100%;
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
 	text-align: center;
 }
 .slide-img {
@@ -46,14 +42,9 @@ html {
 	height: 100%;
 	padding: 40px;
 	background-image: url(./images/pattern-bg.svg);
-	background-size: contain;
-	background-repeat: no-repeat;
 	background-position: center;
-}
-.slide-img img {
-	width: 300px;
-	height: 100%;
-	/* box-shadow: 10px 10px 10px #00000020; */
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 .slide-text {
 	padding-top: 30px;
@@ -62,8 +53,8 @@ html {
 	justify-content: center;
 	flex-direction: column;
 	background-image: url(./images/pattern-quotes.svg);
-	background-size: 80px;
 	background-repeat: no-repeat;
+	background-size: 80px;
 	background-position: top center;
 }
 .testimonial-text {
@@ -72,28 +63,20 @@ html {
 	line-height: 1rem;
 	color: hsl(240, 38%, 20%);
 }
-.testimonial-author {
+.author-text {
 	margin-top: 20px;
 	color: hsl(240, 38%, 20%);
 	font-size: .5rem;
 	font-weight: 700;
 }
-.testimonial-author span {
-	display: block;
-	font-weight: 300;
+.author-text span {
 	color: hsl(240, 18%, 77%);
+	font-weight: 500;
+	display: block;
 }
-.buttons {
-	position: absolute;
-	top: 315px;
-	left: 50%;
-	width: 90px;
-	height: 45px;
-	border-radius: 50px;
-	transform: translateX(-50%);
-	background-color: white;
-	box-shadow: -20px 12px 20px 0px hsla(240, 18%, 77%, 0.52);
-	overflow: hidden;
+.slide-img img {
+	height: 100%;
+	width: 300px;
 }
 .prev,
 .next {
@@ -103,10 +86,21 @@ html {
 	position: absolute;
 	cursor: pointer;
 }
-
 .prev:hover,
 .next:hover {
 	background-color: antiquewhite;
+}
+.buttons {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 315px;
+	width: 90px;
+	height: 45px;
+	box-shadow: -20px 12px 20px 0px hsla(240, 18%, 77%, 0.52);
+	border-radius: 50px;
+	background-color: white;
+	overflow: hidden;
 }
 .prev {
 	left: 0;
@@ -114,23 +108,22 @@ html {
 .next {
 	right: 0;
 }
+.next::after,
 .prev::after {
-	background-image: url(./images/icon-prev.svg);
-}
-.next::after {
-	background-image: url(./images/icon-next.svg);
-}
-.prev::after,
-.next::after {
 	content: '';
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-size: auto;
-	background-position: center;
 	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
 }
-
+.next::after {
+	background-image: url(./images/icon-next.svg);
+}
+.prev::after {
+	background-image: url(./images/icon-prev.svg);
+}
 @media only screen and (min-width: 768px) {
 	.slide {
 		flex-direction: row;
@@ -138,6 +131,7 @@ html {
 	}
 	.slide-text {
 		background-position: 10% top;
+		background-size: 100px;
 		align-items: flex-start;
 	}
 	.slide-img {
@@ -149,10 +143,7 @@ html {
 	}
 	.buttons {
 		top: 415px;
-		transform: translateX(0);
+		transform: translate(0);
 		left: calc(100% - 400px);
-	}
-	.testimonial-text {
-		/* font-weight: 500; */
 	}
 }
