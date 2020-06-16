@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 20px;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	padding: 30px;
+	padding-top: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+img {
+	height: 100%;
+	width: 100%;
+}
+.logo {
+	width: 80px;
+	margin-bottom: 50px;
+}
+.heading {
+	font-size: 2rem;
+	font-weight: 500;
+	color: hsl(0, 0%, 59%);
+	margin-bottom: 20px;
+}
+.heading span {
+	font-weight: 700;
+	color: hsl(209, 33%, 12%);
+}
+.sub-heading {
+	font-size: .95rem;
+	color: hsl(209, 33%, 12%);
+	margin-bottom: 30px;
+}
+
+form {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+}
+form.error input[type="email"] {
+	border-color: hsl(354, 100%, 66%);
+	margin-bottom: 30px;
+}
+form .error_text {
+	position: absolute;
+	top: 70px;
+	font-size: .95rem;
+	margin-top: 10px;
+	color: hsl(354, 100%, 66%);
+	font-weight: 500;
+	font-style: italic;
+}
+form input[type="email"] {
+	height: 50px;
+	width: 100%;
+	border-radius: 50px;
+	padding-left: 20px;
+	border: 2px solid hsl(223, 100%, 88%);
+	font-size: 1rem;
+	color: black;
+	outline: none;
+}
+form input[type="email"]::placeholder {
+	color: hsl(223, 100%, 88%);
+	font-family: 'Libre Franklin', sans-serif;
+}
+
+form button[type="submit"] {
+	background-color: hsl(223, 87%, 63%);
+	width: 100%;
+	height: 50px;
+	border: none;
+	border-radius: 50px;
+	margin-top: 20px;
+	color: white;
+	font-size: 1rem;
+	font-family: 'Libre Franklin', sans-serif;
+	letter-spacing: 1.1px;
+	box-shadow: 0px 0px 20px hsla(223, 87%, 63%, 0.32);
+	cursor: pointer;
+	outline: none;
+}
+.icons {
+	margin-top: 100px;
+}
+
+.icons img {
+	width: 30px;
+	margin: 0 5px;
+}
+.copyright {
+	font-size: .8rem;
+	margin-top: 5px;
+	color: hsl(0, 0%, 59%);
+}
+
+@media only screen and (min-width: 768px) {
+	form {
+		flex-direction: row;
+		max-width: 700px;
+		margin-bottom: 50px;
+	}
+	form button[type='submit'] {
+		margin: 0;
+		width: 40%;
+		margin-left: 20px;
+	}
+	form.error input[type="email"] {
+		margin-bottom: 0;
+	}
+	form .error_text {
+		left: 30px;
+	}
+	.hero-img {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+}
