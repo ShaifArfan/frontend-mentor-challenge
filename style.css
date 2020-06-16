@@ -11,6 +11,7 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	min-height: 100vh;
+	padding-bottom: 100px;
 	background-color: #131417;
 	color: #ffffff;
 	outline: none;
@@ -149,6 +150,13 @@ header a {
 	.list li.active .buttons {
 		height: 80px;
 		justify-content: flex-start;
+	}
+	.list ul li h1 {
+		font-size: 18px;
+		letter-spacing: 2px;
+	}
+	header h1 {
+		font-size: 22px;
 	}
 }
 @media only screen and (min-width: 768px) {
