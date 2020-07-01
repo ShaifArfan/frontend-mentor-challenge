@@ -16,7 +16,7 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
-h1{
+h1,h2,h3{
   font-family: 'Poppins', sans-serif;
 }
 img{
@@ -26,41 +26,32 @@ img{
 .container{
   max-width: 1080px;
   margin: 0 auto;
-  padding: 15px;
+  padding: 0 30px;
+}
+.cta{
+  background-color: $Pink;
+  padding: 10px 45px;
+  border-radius: 50px;
+  box-shadow: -2px 2px 20px 0px #0000001f;
+  font-size: .9rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
 }
 #header{
   width: 100%;
-  padding: 10px;
-  position: absolute;
-  top: 0;
-  nav{
-    display: flex;
-    width: 100%;
-    height: 5vh;
-    justify-content: space-between;
-    align-items: center;
-    .logo{
-      width: 120px;
-    }
-    .cta-header{
-      background-color: white;
-      padding: .5rem 2rem;
-      border-radius: 50px;
-      box-shadow: -2px 2px 20px 0px #0000001f;
-      font-size: .9rem;
-      text-decoration: none;
-      color: black;
-      font-weight: 700;
-    }
-  } 
+  // position: absolute;
+  // top: 0;
+  padding: 20px 0;
+  
 }
-#hero{ 
+#header{ 
   width: 100%;
   height: auto;
   display: block;
   background-image: url(../images/bg-hero-mobile.svg);
-  background-position: center center;
-  background-size: cover top;
+  background-position: center top;
+  background-size: 120%;
   background-repeat: no-repeat;
   background-color: $VeryPaleCyan;
   .container{
@@ -68,10 +59,174 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: flex-start;
+    text-align: center;
+    .header{
+      width: 100%;
+      nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+          width: 120px;
+        }
+        .cta-header{
+          background-color: white;
+          color: black;
+        }
+      } 
+    }
+    .hero{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .hero-info{
+        h1{
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-bottom: 1.3rem;
+        }
+        p{
+          font-size: 1.1rem;
+          font-weight: 400;
+          margin-bottom: 50px;
+        }
+        .cta-hero{
+          background-color: $Pink;
+          color: white;
+          font-size: 1rem;
+          padding: 15px 50px;
+        }
+      }
+      .hero-img{
+        max-width: 500px;
+        margin-top: 80px;
+      }
+    }
   }
 }
 #cards{
-  
+  padding: 100px 0;
+  .container{
+    .card-item{
+      padding: 50px 30px ;
+      box-shadow: -2px 2px 20px 0px #00000015;
+      border-radius: 10px;
+      margin-bottom: 50px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+      .card-info{
+        margin-top: 30px;
+        h3{
+          font-size: 1.3rem;
+          margin-bottom: 20px;
+        }
+        p{
+          font-size: .9rem;
+          font-weight: 400;
+          line-height: 1.5rem;
+          color: $GrayishBlue;
+        }
+      }
+    }
+  }
+}
+#cta-card{
+  display: flex;
+  margin-bottom: -65px;
+  padding: 50px 0 0 0;
+  .container{
+    .cta-card{
+      z-index: 1;
+      width: 100%;
+      max-width: 700px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: -2px 2px 20px 0px #00000015;
+      background-color: white;
+      border-radius: 10px;
+      h2{
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+#footer{
+  background-color: $VeryDarkCyan;
+  color: white;
+  padding: 100px 0 30px 0; 
+  .container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .footer-info{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      .footer-1{
+        margin-bottom: 30px;
+        ul{
+          list-style: none;
+          li{
+            margin-top: 25px;
+            .logo{
+              width: 200px;
+            }
+            .contact{
+              display: flex;
+              align-items: start;
+              justify-content: start;
+            }
+            .icon{
+              width: 15px;
+              flex-grow: inherit;;
+            }
+            p{
+              font-size: 1.2rem;
+              margin-left: 20px;
+              flex: 1;
+            }
+          }
+        }
+      }
+      .footer-2,.footer-3{
+        ul{
+          list-style: none;
+          li{
+            margin-top: 18px;
+            a{
+              text-decoration: none;
+              color: white;
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+      .footer-4{
+        margin-top: 100px;
+        text-align: center;
+        font-size: 40px;
+      }
+      
+    }
+    .footer-copyright{
+      margin-top: 20px;
+      text-align: center;
+      font-size: .8rem;
+    }
+  }
+}
+@media only screen and (min-width: 768px){
+  .header{
+    
+  }
 }
