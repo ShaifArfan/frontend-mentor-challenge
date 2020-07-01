@@ -22,6 +22,7 @@ h1,h2,h3{
 img{
   height: 100%;
   width: 100%;
+  // object-fit: contain;
 }
 .container{
   max-width: 1080px;
@@ -37,13 +38,6 @@ img{
   text-decoration: none;
   color: white;
   font-weight: 700;
-}
-#header{
-  width: 100%;
-  // position: absolute;
-  // top: 0;
-  padding: 20px 0;
-  
 }
 #header{ 
   width: 100%;
@@ -62,7 +56,12 @@ img{
     justify-content: flex-start;
     text-align: center;
     .header{
+      position: absolute;
+      top:0;
       width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 30px;
       nav{
         display: flex;
         width: 100%;
@@ -147,7 +146,6 @@ img{
     .cta-card{
       z-index: 1;
       width: 100%;
-      max-width: 700px;
       padding: 30px;
       text-align: center;
       box-shadow: -2px 2px 20px 0px #00000015;
@@ -225,8 +223,100 @@ img{
     }
   }
 }
+
 @media only screen and (min-width: 768px){
-  .header{
-    
+  
+  #cards{
+    .container{
+      .card-item{
+        flex-direction: row;
+        padding: 50px 100px;
+        .card-info{
+          text-align: left;
+          margin-right: 50px;
+          h3{
+            font-size: 1.8rem;
+          }
+          p{
+            font-size: 1rem;
+          }
+        }
+        .card-img{
+          
+        }
+        &:nth-child(even){
+          flex-direction: row-reverse;
+          .card-info{
+            margin: 0;
+            margin-left: 50px;
+          }
+        }
+      }
+    }
+  }
+  #cta-card{
+    .container{
+      .cta-card{
+        padding: 50px;
+        h2{
+          font-size: 2rem;
+          margin-bottom:50px ;
+        }
+        a{
+          display: inline-block;
+          padding: 20px 60px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  #footer{
+    .container{
+      .footer-info{
+        flex-direction: row;
+        .footer-1,
+        .footer-2,
+        .footer-3,
+        .footer-4{
+          flex: 1;
+          margin: 0 50px;
+        }
+        .footer-1{
+          flex: 1.6;
+        }
+        .footer-2,
+        .footer-3,
+        .footer-4{
+          margin: 0;
+          margin-top: 70px!important;
+        }
+      }
+      .footer-copyright{
+        text-align: right;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1000px){
+  #header{        
+    background-image: url(../images/bg-hero-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    .container{
+      .hero{
+        flex-direction: row;
+        text-align: left;
+        .hero-img{
+          flex: 3;
+        }
+        .hero-info{
+          flex: 2;
+          margin-right: 50px;
+          h1{
+            font-size: 2.2rem;
+          }
+        }
+      }
+    }
   }
 }

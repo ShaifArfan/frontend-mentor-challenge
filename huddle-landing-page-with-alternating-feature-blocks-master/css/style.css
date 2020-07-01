@@ -40,11 +40,6 @@ img {
 
 #header {
   width: 100%;
-  padding: 20px 0;
-}
-
-#header {
-  width: 100%;
   height: auto;
   display: block;
   background-image: url(../images/bg-hero-mobile.svg);
@@ -73,7 +68,12 @@ img {
 }
 
 #header .container .header {
+  position: absolute;
+  top: 0;
   width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 #header .container .header nav {
@@ -193,7 +193,6 @@ img {
 #cta-card .container .cta-card {
   z-index: 1;
   width: 100%;
-  max-width: 700px;
   padding: 30px;
   text-align: center;
   -webkit-box-shadow: -2px 2px 20px 0px #00000015;
@@ -304,4 +303,104 @@ img {
   margin-top: 20px;
   text-align: center;
   font-size: .8rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #cards .container .card-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 50px 100px;
+  }
+  #cards .container .card-item .card-info {
+    text-align: left;
+    margin-right: 50px;
+  }
+  #cards .container .card-item .card-info h3 {
+    font-size: 1.8rem;
+  }
+  #cards .container .card-item .card-info p {
+    font-size: 1rem;
+  }
+  #cards .container .card-item:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  #cards .container .card-item:nth-child(even) .card-info {
+    margin: 0;
+    margin-left: 50px;
+  }
+  #cta-card .container .cta-card {
+    padding: 50px;
+  }
+  #cta-card .container .cta-card h2 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+  }
+  #cta-card .container .cta-card a {
+    display: inline-block;
+    padding: 20px 60px;
+    font-size: 1.2rem;
+  }
+  #footer .container .footer-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #footer .container .footer-info .footer-1,
+  #footer .container .footer-info .footer-2,
+  #footer .container .footer-info .footer-3,
+  #footer .container .footer-info .footer-4 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 0 50px;
+  }
+  #footer .container .footer-info .footer-1 {
+    -webkit-box-flex: 1.6;
+        -ms-flex: 1.6;
+            flex: 1.6;
+  }
+  #footer .container .footer-info .footer-2,
+  #footer .container .footer-info .footer-3,
+  #footer .container .footer-info .footer-4 {
+    margin: 0;
+    margin-top: 70px !important;
+  }
+  #footer .container .footer-copyright {
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #header {
+    background-image: url(../images/bg-hero-desktop.svg);
+    background-size: cover;
+    background-position: center;
+  }
+  #header .container .hero {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+  }
+  #header .container .hero .hero-img {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+  }
+  #header .container .hero .hero-info {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    margin-right: 50px;
+  }
+  #header .container .hero .hero-info h1 {
+    font-size: 2.2rem;
+  }
 }
