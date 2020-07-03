@@ -42,7 +42,8 @@ a{
 }
 #header{
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 100px 0;
   display: block;
   background-image: url(../images/bg-hero-mobile.svg);
   background-position: center top;
