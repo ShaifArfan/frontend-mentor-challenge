@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
 // variables
 $Pink: hsl(322, 100%, 66%);
@@ -6,42 +11,38 @@ $VeryPaleCyan: hsl(193, 100%, 96%);
 $VeryDarkCyan: hsl(192, 100%, 9%);
 $GrayishBlue: hsl(208, 11%, 55%);
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-body{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-}
 h1,h2,h3{
   font-family: 'Poppins', sans-serif;
+}
+body{
+  font-family: 'Open Sans',sans-serif;
+  font-size: 18px;
 }
 img{
   height: 100%;
   width: 100%;
-  // object-fit: contain;
 }
 .container{
   max-width: 1080px;
   margin: 0 auto;
   padding: 0 30px;
 }
+a{
+  text-decoration: none;
+  color: black;
+}
 .cta{
-  background-color: $Pink;
   padding: 10px 45px;
   border-radius: 50px;
-  box-shadow: -2px 2px 20px 0px #0000001f;
-  font-size: .9rem;
-  text-decoration: none;
+  background-color: $Pink;
   color: white;
   font-weight: 700;
+  box-shadow: -2px 2px 20px 0px #0000001f;
+  font-size: .9rem;
 }
-#header{ 
+#header{
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: block;
   background-image: url(../images/bg-hero-mobile.svg);
   background-position: center top;
@@ -49,41 +50,37 @@ img{
   background-repeat: no-repeat;
   background-color: $VeryPaleCyan;
   .container{
-    height: 100vh;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
-    .header{
+    .nav{
       position: absolute;
-      top:0;
+      top: 0;
       width: 100%;
       max-width: 1080px;
       margin: 0 auto;
       padding: 30px;
-      nav{
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        .logo{
-          width: 120px;
-        }
-        .cta-header{
-          background-color: white;
-          color: black;
-        }
-      } 
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .logo{
+        width: 120px;
+      }
+      .cta-header{
+        background-color: white;
+        color: black;
+      }
     }
     .hero{
       width: 100%;
       height: 100%;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-
+      flex-direction: column;
       .hero-info{
         h1{
           font-size: 1.8rem;
@@ -96,15 +93,17 @@ img{
           margin-bottom: 50px;
         }
         .cta-hero{
-          background-color: $Pink;
-          color: white;
-          font-size: 1rem;
           padding: 15px 50px;
+          font-size: 1rem;
         }
+        
       }
       .hero-img{
-        max-width: 500px;
-        margin-top: 80px;
+        img{
+          max-width: 600px;
+          margin-top: 40px;
+          object-fit: contain;
+        }
       }
     }
   }
@@ -114,13 +113,11 @@ img{
   .container{
     .card-item{
       padding: 50px 30px ;
-      box-shadow: -2px 2px 20px 0px #00000015;
-      border-radius: 10px;
+      box-shadow: -2px 2px 20px 0px #00000013;
       margin-bottom: 50px;
+      border-radius: 10px;
       text-align: center;
       display: flex;
-      align-items: center;
-      justify-content: center;
       flex-direction: column-reverse;
       .card-info{
         margin-top: 30px;
@@ -140,17 +137,16 @@ img{
 }
 #cta-card{
   display: flex;
-  margin-bottom: -65px;
-  padding: 50px 0 0 0;
+  padding:  50px 0;
+  margin-bottom: -100px;
   .container{
-    .cta-card{
-      z-index: 1;
+    .card{
       width: 100%;
       padding: 30px;
       text-align: center;
-      box-shadow: -2px 2px 20px 0px #00000015;
+      box-shadow: -2px 2px 20px 0px #00000013;
       background-color: white;
-      border-radius: 10px;
+      border-radius:10px ;
       h2{
         font-size: 1.3rem;
         margin-bottom: 30px;
@@ -161,7 +157,7 @@ img{
 #footer{
   background-color: $VeryDarkCyan;
   color: white;
-  padding: 100px 0 30px 0; 
+  padding: 100px 0 30px 0;
   .container{
     width: 100%;
     display: flex;
@@ -171,7 +167,7 @@ img{
       flex-direction: column;
       justify-content: flex-start;
       .footer-1{
-        margin-bottom: 30px;
+        margin-top: 30px;
         ul{
           list-style: none;
           li{
@@ -183,15 +179,15 @@ img{
               display: flex;
               align-items: start;
               justify-content: start;
-            }
-            .icon{
-              width: 15px;
-              flex-grow: inherit;;
-            }
-            p{
-              font-size: 1.2rem;
-              margin-left: 20px;
-              flex: 1;
+              img{
+                margin-top: 10px;
+                width: 15px;
+              }
+              p{
+                font-size: 1.2rem;
+                margin-left: 20px;
+                flex: 1;
+              }
             }
           }
         }
@@ -203,18 +199,17 @@ img{
             margin-top: 18px;
             a{
               text-decoration: none;
-              color: white;
               font-size: 1.2rem;
+              color: white;
             }
           }
         }
       }
       .footer-4{
-        margin-top: 100px;
+        margin-top: 80px;
         text-align: center;
         font-size: 40px;
       }
-      
     }
     .footer-copyright{
       margin-top: 20px;
@@ -223,7 +218,6 @@ img{
     }
   }
 }
-
 @media only screen and (min-width: 768px){
   
   #cards{
@@ -231,23 +225,21 @@ img{
       .card-item{
         flex-direction: row;
         padding: 50px 100px;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
         .card-info{
-          text-align: left;
           margin-right: 50px;
           h3{
-            font-size: 1.8rem;
+            font-size: 1.7rem;
           }
           p{
             font-size: 1rem;
           }
         }
-        .card-img{
-          
-        }
         &:nth-child(even){
           flex-direction: row-reverse;
           .card-info{
-            margin: 0;
             margin-left: 50px;
           }
         }
@@ -256,11 +248,11 @@ img{
   }
   #cta-card{
     .container{
-      .cta-card{
+      .card{
         padding: 50px;
         h2{
           font-size: 2rem;
-          margin-bottom:50px ;
+          margin-bottom: 50px;
         }
         a{
           display: inline-block;
@@ -279,16 +271,16 @@ img{
         .footer-3,
         .footer-4{
           flex: 1;
-          margin: 0 50px;
+          margin-left: 50px;
         }
         .footer-1{
-          flex: 1.6;
+          flex: 2.5;
+          margin: 0;
         }
         .footer-2,
         .footer-3,
         .footer-4{
-          margin: 0;
-          margin-top: 70px!important;
+          margin-top: 70px;
         }
       }
       .footer-copyright{
@@ -298,10 +290,10 @@ img{
   }
 }
 @media only screen and (min-width: 1000px){
-  #header{        
+  #header {
     background-image: url(../images/bg-hero-desktop.svg);
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     .container{
       .hero{
         flex-direction: row;

@@ -6,13 +6,13 @@
           box-sizing: border-box;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-}
-
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans',sans-serif;
+  font-size: 18px;
 }
 
 img {
@@ -26,21 +26,25 @@ img {
   padding: 0 30px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .cta {
-  background-color: #ff52bf;
   padding: 10px 45px;
   border-radius: 50px;
+  background-color: #ff52bf;
+  color: white;
+  font-weight: 700;
   -webkit-box-shadow: -2px 2px 20px 0px #0000001f;
           box-shadow: -2px 2px 20px 0px #0000001f;
   font-size: .9rem;
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
 }
 
 #header {
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: block;
   background-image: url(../images/bg-hero-mobile.svg);
   background-position: center top;
@@ -50,50 +54,46 @@ img {
 }
 
 #header .container {
-  height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   text-align: center;
 }
 
-#header .container .header {
+#header .container .nav {
   position: absolute;
   top: 0;
   width: 100%;
   max-width: 1080px;
   margin: 0 auto;
   padding: 30px;
-}
-
-#header .container .header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#header .container .header nav .logo {
+#header .container .nav .logo {
   width: 120px;
 }
 
-#header .container .header nav .cta-header {
+#header .container .nav .cta-header {
   background-color: white;
   color: black;
 }
@@ -104,16 +104,16 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #header .container .hero .hero-info h1 {
@@ -129,15 +129,15 @@ img {
 }
 
 #header .container .hero .hero-info .cta-hero {
-  background-color: #ff52bf;
-  color: white;
-  font-size: 1rem;
   padding: 15px 50px;
+  font-size: 1rem;
 }
 
-#header .container .hero .hero-img {
-  max-width: 500px;
-  margin-top: 80px;
+#header .container .hero .hero-img img {
+  max-width: 600px;
+  margin-top: 40px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 #cards {
@@ -146,20 +146,14 @@ img {
 
 #cards .container .card-item {
   padding: 50px 30px;
-  -webkit-box-shadow: -2px 2px 20px 0px #00000015;
-          box-shadow: -2px 2px 20px 0px #00000015;
-  border-radius: 10px;
+  -webkit-box-shadow: -2px 2px 20px 0px #00000013;
+          box-shadow: -2px 2px 20px 0px #00000013;
   margin-bottom: 50px;
+  border-radius: 10px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
@@ -186,22 +180,21 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: -65px;
-  padding: 50px 0 0 0;
+  padding: 50px 0;
+  margin-bottom: -100px;
 }
 
-#cta-card .container .cta-card {
-  z-index: 1;
+#cta-card .container .card {
   width: 100%;
   padding: 30px;
   text-align: center;
-  -webkit-box-shadow: -2px 2px 20px 0px #00000015;
-          box-shadow: -2px 2px 20px 0px #00000015;
+  -webkit-box-shadow: -2px 2px 20px 0px #00000013;
+          box-shadow: -2px 2px 20px 0px #00000013;
   background-color: white;
   border-radius: 10px;
 }
 
-#cta-card .container .cta-card h2 {
+#cta-card .container .card h2 {
   font-size: 1.3rem;
   margin-bottom: 30px;
 }
@@ -237,7 +230,7 @@ img {
 }
 
 #footer .container .footer-info .footer-1 {
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 #footer .container .footer-info .footer-1 ul {
@@ -264,14 +257,12 @@ img {
           justify-content: start;
 }
 
-#footer .container .footer-info .footer-1 ul li .icon {
+#footer .container .footer-info .footer-1 ul li .contact img {
+  margin-top: 10px;
   width: 15px;
-  -webkit-box-flex: inherit;
-      -ms-flex-positive: inherit;
-          flex-grow: inherit;
 }
 
-#footer .container .footer-info .footer-1 ul li p {
+#footer .container .footer-info .footer-1 ul li .contact p {
   font-size: 1.2rem;
   margin-left: 20px;
   -webkit-box-flex: 1;
@@ -289,12 +280,12 @@ img {
 
 #footer .container .footer-info .footer-2 ul li a, #footer .container .footer-info .footer-3 ul li a {
   text-decoration: none;
-  color: white;
   font-size: 1.2rem;
+  color: white;
 }
 
 #footer .container .footer-info .footer-4 {
-  margin-top: 100px;
+  margin-top: 80px;
   text-align: center;
   font-size: 40px;
 }
@@ -312,13 +303,19 @@ img {
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 50px 100px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
   }
   #cards .container .card-item .card-info {
-    text-align: left;
     margin-right: 50px;
   }
   #cards .container .card-item .card-info h3 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   #cards .container .card-item .card-info p {
     font-size: 1rem;
@@ -330,17 +327,16 @@ img {
             flex-direction: row-reverse;
   }
   #cards .container .card-item:nth-child(even) .card-info {
-    margin: 0;
     margin-left: 50px;
   }
-  #cta-card .container .cta-card {
+  #cta-card .container .card {
     padding: 50px;
   }
-  #cta-card .container .cta-card h2 {
+  #cta-card .container .card h2 {
     font-size: 2rem;
     margin-bottom: 50px;
   }
-  #cta-card .container .cta-card a {
+  #cta-card .container .card a {
     display: inline-block;
     padding: 20px 60px;
     font-size: 1.2rem;
@@ -358,18 +354,18 @@ img {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    margin: 0 50px;
+    margin-left: 50px;
   }
   #footer .container .footer-info .footer-1 {
-    -webkit-box-flex: 1.6;
-        -ms-flex: 1.6;
-            flex: 1.6;
+    -webkit-box-flex: 2.5;
+        -ms-flex: 2.5;
+            flex: 2.5;
+    margin: 0;
   }
   #footer .container .footer-info .footer-2,
   #footer .container .footer-info .footer-3,
   #footer .container .footer-info .footer-4 {
-    margin: 0;
-    margin-top: 70px !important;
+    margin-top: 70px;
   }
   #footer .container .footer-copyright {
     text-align: right;
@@ -379,8 +375,8 @@ img {
 @media only screen and (min-width: 1000px) {
   #header {
     background-image: url(../images/bg-hero-desktop.svg);
-    background-size: cover;
     background-position: center;
+    background-size: cover;
   }
   #header .container .hero {
     -webkit-box-orient: horizontal;
